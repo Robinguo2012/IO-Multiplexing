@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include "robust_io.h"
-#include "sock_func.h"
+#include "socket_wrap.h"
 
 #define MAXLINE 1024
 
