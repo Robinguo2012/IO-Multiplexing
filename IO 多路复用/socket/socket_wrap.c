@@ -48,38 +48,3 @@ int open_listenfd(char *port) {
 }
 
 
-/*和服务器建立连接的函数，可重入和协议无关*/
-int open_clientfd(char *hostname,char *port) {
-    
-    int client_fd;
-    
-    /* Get a list of pontential server address list*/
-    struct addrinfo *p, *listp, hints;
-    //    char buf[MAXLINE];
-    
-    memset(&hints, 0, sizeof(struct addrinfo));
-    hints.ai_socktype = SOCK_STREAM; /*open a connection, 长连接*/
-    hints.ai_flags = AI_NUMERICSERV;
-    hints.ai_flags |= AI_ADDRCONFIG;
-    
-    getaddrinfo(hostname, port, &hints, &listp);
-    
-    /*Walk the list the one that we can successfully connect to */
-    for (p = listp; p; p = listp->ai_next) {
-        if ((client_fd = socket(p->ai_family, p->ai_socktype, p->ai_protocol))<0) continue; /*socket failed, try next*/
-        
-        if (connect(client_fd, p->ai_addr, p->ai_addrlen) != -1) {
-            break; /* success */
-        }
-        close(client_fd);
-    }
-    
-    /*clean up*/
-    freeaddrinfo(listp);
-    
-    if (!p) {
-        return -1; // All connection failed;
-    } else
-        return client_fd;
-}
-

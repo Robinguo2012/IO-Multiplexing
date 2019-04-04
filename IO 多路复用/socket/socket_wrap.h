@@ -22,6 +22,5 @@
 
 int open_listenfd(char *port);
 
-int open_clientfd(char *hostname,char *port);
 
 #endif /* socket_wrap_h */
