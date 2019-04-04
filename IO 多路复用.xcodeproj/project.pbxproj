@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D4FB034C225473AF002BB6D8 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D4FB034B225473AF002BB6D8 /* main.c */; };
-		D4FB036A2255B394002BB6D8 /* robust_io.c in Sources */ = {isa = PBXBuildFile; fileRef = D4FB03682255B394002BB6D8 /* robust_io.c */; };
-		D4FB036E2255B39F002BB6D8 /* socket_wrap.c in Sources */ = {isa = PBXBuildFile; fileRef = D4FB036C2255B39F002BB6D8 /* socket_wrap.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +25,6 @@
 /* Begin PBXFileReference section */
 		D4FB0348225473AF002BB6D8 /* IO 多路复用 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "IO 多路复用"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FB034B225473AF002BB6D8 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		D4FB03682255B394002BB6D8 /* robust_io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = robust_io.c; sourceTree = "<group>"; };
-		D4FB03692255B394002BB6D8 /* robust_io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = robust_io.h; sourceTree = "<group>"; };
-		D4FB036C2255B39F002BB6D8 /* socket_wrap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = socket_wrap.c; sourceTree = "<group>"; };
-		D4FB036D2255B39F002BB6D8 /* socket_wrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socket_wrap.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,29 +57,9 @@
 		D4FB034A225473AF002BB6D8 /* IO 多路复用 */ = {
 			isa = PBXGroup;
 			children = (
-				D4FB036B2255B39F002BB6D8 /* socket */,
-				D4FB03672255B394002BB6D8 /* io */,
 				D4FB034B225473AF002BB6D8 /* main.c */,
 			);
 			path = "IO 多路复用";
-			sourceTree = "<group>";
-		};
-		D4FB03672255B394002BB6D8 /* io */ = {
-			isa = PBXGroup;
-			children = (
-				D4FB03682255B394002BB6D8 /* robust_io.c */,
-				D4FB03692255B394002BB6D8 /* robust_io.h */,
-			);
-			path = io;
-			sourceTree = "<group>";
-		};
-		D4FB036B2255B39F002BB6D8 /* socket */ = {
-			isa = PBXGroup;
-			children = (
-				D4FB036C2255B39F002BB6D8 /* socket_wrap.c */,
-				D4FB036D2255B39F002BB6D8 /* socket_wrap.h */,
-			);
-			path = socket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +118,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4FB036E2255B39F002BB6D8 /* socket_wrap.c in Sources */,
-				D4FB036A2255B394002BB6D8 /* robust_io.c in Sources */,
 				D4FB034C225473AF002BB6D8 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
